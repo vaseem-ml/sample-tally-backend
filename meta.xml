@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<EntityDescriptor xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="http://20.193.153.184:3000/saml/metadata">
+  <IDPSSODescriptor xmlns:ds="http://www.w3.org/2000/09/xmldsig#" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+    <KeyDescriptor use="signing">
+      <ds:KeyInfo xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+        <ds:X509Data>
+          <ds:X509Certificate>
+            MIID3zCCAsegAwIBAgIUU7UDKvhUAYXZsdZ2c6BuPkWRuxEwDQYJKoZIhvcNAQELBQAwfzELMAkGA1UEBhMCSU4xDjAMBgNVBAgMBURlbGhpMQ4wDAYDVQQHDAVEZWxoaTEQMA4GA1UECgwHR3Jldml0eTEMMAoGA1UECwwDREVWMQwwCgYDVQQDDANERVYxIjAgBgkqhkiG9w0BCQEWE2d1cmthcmFuQGdyZXZpdHkuaW4wHhcNMjMwODIwMTAwODQyWhcNMjQwODE5MTAwODQyWjB/MQswCQYDVQQGEwJJTjEOMAwGA1UECAwFRGVsaGkxDjAMBgNVBAcMBURlbGhpMRAwDgYDVQQKDAdHcmV2aXR5MQwwCgYDVQQLDANERVYxDDAKBgNVBAMMA0RFVjEiMCAGCSqGSIb3DQEJARYTZ3Vya2FyYW5AZ3Jldml0eS5pbjCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBANoROaJ+tZ1vP4XDDHYXYTRcMtPfueNzbA9gbPcc+bo13GWwn2V/axV7rRXIm77fByb2i5/DzKvH81oUCcUzbiIGYBN/z12yORjtCS0a/mJCRTTz5HrRkxhCDhkBELtQULd8KbrM66aoWBfckyifqtCsOUSk8mAW/rZjOgL9nGbvuQNdGTFL1oYvPfl5zvALirEkh0IPqPBrEx1zIUJqW8EKGpxD/qgB/+oZfpBeb8BxYimXYIINuFDiloXjv0sAHDvCH2zPi6cVbM+uuJYwLMxYnlHRAfLnbbXNB/1HD3SpBv6Os9tZ/63OHHR3fwRu73Pg82r9828mVJ50d602jWMCAwEAAaNTMFEwHQYDVR0OBBYEFOKUpfLT59OkDD9F4C052jWNQBuNMB8GA1UdIwQYMBaAFOKUpfLT59OkDD9F4C052jWNQBuNMA8GA1UdEwEB/wQFMAMBAf8wDQYJKoZIhvcNAQELBQADggEBAJFVPYOvNXbBE3IsVfVmho3WsVBRYHdfnhLWx6I2BixVySwQaSMF4KiSz+taa5sthRAWUEFF2Yp5qxnWY6ijkfzWQBuCPe88/veSD5dOZHjhzNAuDH4bkosqCGMirxrSI3IpVZuIaUwxHVuNcn0f2BF+6aAxaLLoEWJt3t1bL8BACK+LTiHocbHx6IaYcc5Y/JfUalq1ETGOIE5Rvdqr+KuBVTRvFKJ/xgvv+FzovyXNAB8nfVkWKZ7yueVNCorPB3wdTUPAE/Hum2QBHr/iNAwpSrN3ebKKd43Je1uFOXgQsRh3VkXBSFSN3gQYQ3gs/IqldtiJm0L279JJJ4HTnOQ=
+          </ds:X509Certificate>
+        </ds:X509Data>
+      </ds:KeyInfo>
+    </KeyDescriptor>
+    <SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="http://20.204.153.20:4000/saml/slo"/>
+    <NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress</NameIDFormat>
+    <SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="http://localhost:3001/home"/>
+    <SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="http://localhost:3001/home"/>
+    <SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="http://localhost:3001/home"/>
+  </IDPSSODescriptor>
+</EntityDescriptor>
